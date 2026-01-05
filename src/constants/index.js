@@ -1,3 +1,47 @@
+import finderImg from "../public/images/finder.png";
+import safariImg from "../public/images/safari.png";
+import photosImg from "../public/images/photos.png";
+import contactImg from "../public/images/contact.png";
+import terminalImg from "../public/images/terminal.png";
+import trashImg from "../public/images/trash.png";
+import blog1Img from "../public/images/blog1.png";
+import blog2Img from "../public/images/blog2.png";
+import blog3Img from "../public/images/blog3.png";
+import gal1Img from "../public/images/gal1.png";
+import gal2Img from "../public/images/gal2.png";
+import gal3Img from "../public/images/gal3.png";
+import gal4Img from "../public/images/gal4.png";
+import folderImg from "../public/images/folder.png";
+import txtImg from "../public/images/txt.png";
+import imageImg from "../public/images/image.png";
+import project1Img from "../public/images/project-1.png";
+import plainImg from "../public/images/plain.png";
+import project2Img from "../public/images/project-2.png";
+import project3Img from "../public/images/project-3.png";
+import adrianImg from "../public/images/adrian.jpg";
+import adrian2Img from "../public/images/adrian-2.jpg";
+import adrian3Img from "../public/images/adrian-3.jpeg";
+import pdfImg from "../public/images/pdf.png";
+import trash1Img from "../public/images/trash-1.png";
+import trash2Img from "../public/images/trash-2.png";
+
+import githubIcon from "../public/icons/github.svg";
+import atomIcon from "../public/icons/atom.svg";
+import twitterIcon from "../public/icons/twitter.svg";
+import linkedinIcon from "../public/icons/linkedin.svg";
+import gicon1 from "../public/icons/gicon1.svg";
+import gicon2 from "../public/icons/gicon2.svg";
+import fileIcon from "../public/icons/file.svg";
+import gicon4 from "../public/icons/gicon4.svg";
+import gicon5 from "../public/icons/gicon5.svg";
+import wifiIcon from "../public/icons/wifi.svg";
+import searchIcon from "../public/icons/search.svg";
+import userIcon from "../public/icons/user.svg";
+import modeIcon from "../public/icons/mode.svg";
+import workIcon from "../public/icons/work.svg";
+import infoIcon from "../public/icons/info.svg";
+import trashIcon from "../public/icons/trash.svg";
+
 const navLinks = [
   {
     id: 1,
@@ -19,19 +63,19 @@ const navLinks = [
 const navIcons = [
   {
     id: 1,
-    img: "src/public/icons/wifi.svg",
+    img: wifiIcon,
   },
   {
     id: 2,
-    img: "src/public/icons/search.svg",
+    img: searchIcon,
   },
   {
     id: 3,
-    img: "src/public/icons/user.svg",
+    img: userIcon,
   },
   {
     id: 4,
-    img: "src/public/icons/mode.svg",
+    img: modeIcon,
   },
 ];
 
@@ -39,37 +83,37 @@ const dockApps = [
   {
     id: "finder",
     name: "Portfolio", // was "Finder"
-    icon: "finder.png",
+    icon: finderImg,
     canOpen: true,
   },
   {
     id: "safari",
     name: "Articles", // was "Safari"
-    icon: "safari.png",
+    icon: safariImg,
     canOpen: true,
   },
   {
     id: "photos",
     name: "Gallery", // was "Photos"
-    icon: "photos.png",
+    icon: photosImg,
     canOpen: true,
   },
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
-    icon: "contact.png",
+    icon: contactImg,
     canOpen: true,
   },
   {
     id: "terminal",
     name: "Skills", // was "Terminal"
-    icon: "terminal.png",
+    icon: terminalImg,
     canOpen: true,
   },
   {
     id: "trash",
     name: "Archive", // was "Trash"
-    icon: "trash.png",
+    icon: trashImg,
     canOpen: false,
   },
 ];
@@ -80,21 +124,21 @@ const blogPosts = [
     date: "Sep 2, 2025",
     title:
       "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
+    image: blog1Img,
     link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
   },
   {
     id: 2,
     date: "Aug 28, 2025",
     title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
+    image: blog2Img,
     link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
   },
   {
     id: 3,
     date: "Aug 15, 2025",
     title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
+    image: blog3Img,
     link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
   },
 ];
@@ -102,27 +146,33 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["React.js", "Next.js", "JavaScript"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS", "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express.js"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB"],
+  },
+  {
+    category: "Blockchain & Web3",
+    items: [
+      "Blockchain Fundamentals",
+      "Smart Contract Development",
+      "Web3 Application Development",
+      "Internet Computer Protocol (ICP)",
+      "dApp Development",
+    ],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub"],
   },
 ];
 
@@ -130,28 +180,28 @@ const socials = [
   {
     id: 1,
     text: "Github",
-    icon: "/icons/github.svg",
+    icon: githubIcon,
     bg: "#f4656b",
     link: "https://github.com/JavaScript-Mastery-Pro",
   },
   {
     id: 2,
     text: "Platform",
-    icon: "/icons/atom.svg",
+    icon: atomIcon,
     bg: "#4bcb63",
     link: "https://jsmastery.com/",
   },
   {
     id: 3,
     text: "Twitter/X",
-    icon: "/icons/twitter.svg",
+    icon: twitterIcon,
     bg: "#ff866b",
     link: "https://x.com/jsmasterypro",
   },
   {
     id: 4,
     text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
+    icon: linkedinIcon,
     bg: "#05b6f6",
     link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
   },
@@ -160,27 +210,27 @@ const socials = [
 const photosLinks = [
   {
     id: 1,
-    icon: "/icons/gicon1.svg",
+    icon: gicon1,
     title: "Library",
   },
   {
     id: 2,
-    icon: "/icons/gicon2.svg",
+    icon: gicon2,
     title: "Memories",
   },
   {
     id: 3,
-    icon: "/icons/file.svg",
+    icon: fileIcon,
     title: "Places",
   },
   {
     id: 4,
-    icon: "/icons/gicon4.svg",
+    icon: gicon4,
     title: "People",
   },
   {
     id: 5,
-    icon: "/icons/gicon5.svg",
+    icon: gicon5,
     title: "Favorites",
   },
 ];
@@ -188,19 +238,19 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: gal1Img,
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: gal2Img,
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: gal3Img,
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: gal4Img,
   },
 ];
 
@@ -219,14 +269,14 @@ const WORK_LOCATION = {
   id: 1,
   type: "work",
   name: "Work",
-  icon: "/icons/work.svg",
+  icon: workIcon,
   kind: "folder",
   children: [
     // ▶ Project 1
     {
       id: 5,
       name: "Nike Ecommerce Website Application",
-      icon: "/images/folder.png",
+      icon: folderImg,
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
       windowPosition: "top-[5vh] left-5", // optional: Finder window position
@@ -234,7 +284,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "Nike Project.txt",
-          icon: "/images/txt.png",
+          icon: txtImg,
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
@@ -248,7 +298,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "nike.com",
-          icon: "/images/safari.png",
+          icon: safariImg,
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
@@ -257,16 +307,16 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "nike.png",
-          icon: "/images/image.png",
+          icon: imageImg,
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: project1Img,
         },
         {
           id: 5,
           name: "Design.fig",
-          icon: "/images/plain.png",
+          icon: plainImg,
           kind: "file",
           fileType: "fig",
           href: "https://google.com",
@@ -279,7 +329,7 @@ const WORK_LOCATION = {
     {
       id: 6,
       name: "AI Resume Analyzer",
-      icon: "/images/folder.png",
+      icon: folderImg,
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
@@ -287,7 +337,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "AI Resume Analyzer Project.txt",
-          icon: "/images/txt.png",
+          icon: txtImg,
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
@@ -301,7 +351,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "ai-resume-analyzer.com",
-          icon: "/images/safari.png",
+          icon: safariImg,
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
@@ -310,16 +360,16 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "ai-resume-analyzer.png",
-          icon: "/images/image.png",
+          icon: imageImg,
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: project2Img,
         },
         {
           id: 5,
           name: "Design.fig",
-          icon: "/images/plain.png",
+          icon: plainImg,
           kind: "file",
           fileType: "fig",
           href: "https://google.com",
@@ -332,7 +382,7 @@ const WORK_LOCATION = {
     {
       id: 7,
       name: "Food Delivery App",
-      icon: "/images/folder.png",
+      icon: folderImg,
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
@@ -340,7 +390,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "Food Delivery App Project.txt",
-          icon: "/images/txt.png",
+          icon: txtImg,
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
@@ -354,7 +404,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "food-delivery-app.com",
-          icon: "/images/safari.png",
+          icon: safariImg,
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
@@ -363,16 +413,16 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "food-delivery-app.png",
-          icon: "/images/image.png",
+          icon: imageImg,
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: project3Img,
         },
         {
           id: 5,
           name: "Design.fig",
-          icon: "/images/plain.png",
+          icon: plainImg,
           kind: "file",
           fileType: "fig",
           href: "https://google.com",
@@ -387,45 +437,45 @@ const ABOUT_LOCATION = {
   id: 2,
   type: "about",
   name: "About me",
-  icon: "/icons/info.svg",
+  icon: infoIcon,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "me.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: adrianImg,
     },
     {
       id: 2,
       name: "casual-me.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: adrian2Img,
     },
     {
       id: 3,
       name: "conference-me.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: adrian3Img,
     },
     {
       id: 4,
       name: "about-me.txt",
-      icon: "/images/txt.png",
+      icon: txtImg,
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: adrianImg,
       description: [
         "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
@@ -440,13 +490,13 @@ const RESUME_LOCATION = {
   id: 3,
   type: "resume",
   name: "Resume",
-  icon: "/icons/file.svg",
+  icon: fileIcon,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "Resume.pdf",
-      icon: "/images/pdf.png",
+      icon: pdfImg,
       kind: "file",
       fileType: "pdf",
       // you can add `href` if you want to open a hosted resume
@@ -459,26 +509,26 @@ const TRASH_LOCATION = {
   id: 4,
   type: "trash",
   name: "Trash",
-  icon: "/icons/trash.svg",
+  icon: trashIcon,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "trash1.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
+      imageUrl: trash1Img,
     },
     {
       id: 2,
       name: "trash2.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      imageUrl: trash2Img,
     },
   ],
 };
