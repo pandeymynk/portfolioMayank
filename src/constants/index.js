@@ -1,3 +1,57 @@
+import finderImg from "../public/images/finder.png";
+import safariImg from "../public/images/safari.png";
+import photosImg from "../public/images/photos.png";
+import contactImg from "../public/images/contact.png";
+import terminalImg from "../public/images/terminal.png";
+import trashImg from "../public/images/trash.png";
+import blog1Img from "../public/images/blog1.png";
+import blog2Img from "../public/images/blog2.png";
+import blog3Img from "../public/images/blog3.png";
+import gal1Img from "../public/images/gal1.jpg";
+import gal2Img from "../public/images/gal2.jpg";
+import gal3Img from "../public/images/gal3.jpg";
+import gal4Img from "../public/images/gal4.jpg";
+import gal5Img from "../public/images/gal5.jpg";
+import gal6Img from "../public/images/gal6.jpg";
+import gal7Img from "../public/images/gal7.jpg";
+import gal8Img from "../public/images/gal8.jpg";
+import folderImg from "../public/images/folder.png";
+import txtImg from "../public/images/txt.png";
+import imageImg from "../public/images/image.png";
+import project1Img from "../public/images/project-1.png";
+import plainImg from "../public/images/plain.png";
+import project2Img from "../public/images/project-2.png";
+import project3Img from "../public/images/project-3.png";
+import adrianImg from "../public/images/adrian.jpg";
+import adrian2Img from "../public/images/adrian-2.jpg";
+import adrian3Img from "../public/images/adrian-3.jpeg";
+import pdfImg from "../public/images/pdf.png";
+import trash1Img from "../public/images/trash-1.png";
+import trash2Img from "../public/images/trash-2.png";
+import journeyImg from "../public/images/journeyImg.png";
+import hackathonImg from "../public/images/hackathon-workshop.jpg";
+import systemsImg from "../public/images/thinking-systems.jpg";
+import aiWeb3Img from "../public/images/ai-web3-impact.jpg";
+
+import githubIcon from "../public/icons/github.svg";
+import atomIcon from "../public/icons/atom.svg";
+import twitterIcon from "../public/icons/twitter.svg";
+import linkedinIcon from "../public/icons/linkedin.svg";
+import mailIcon from "../public/icons/share.svg";
+import telegramIcon from "../public/icons/share.svg";
+import gicon1 from "../public/icons/gicon1.svg";
+import gicon2 from "../public/icons/gicon2.svg";
+import fileIcon from "../public/icons/file.svg";
+import gicon4 from "../public/icons/gicon4.svg";
+import gicon5 from "../public/icons/gicon5.svg";
+import wifiIcon from "../public/icons/wifi.svg";
+import searchIcon from "../public/icons/search.svg";
+import userIcon from "../public/icons/user.svg";
+import modeIcon from "../public/icons/mode.svg";
+import workIcon from "../public/icons/work.svg";
+import infoIcon from "../public/icons/info.svg";
+import trashIcon from "../public/icons/trash.svg";
+
 const navLinks = [
   {
     id: 1,
@@ -19,19 +73,19 @@ const navLinks = [
 const navIcons = [
   {
     id: 1,
-    img: "src/public/icons/wifi.svg",
+    img: wifiIcon,
   },
   {
     id: 2,
-    img: "src/public/icons/search.svg",
+    img: searchIcon,
   },
   {
     id: 3,
-    img: "src/public/icons/user.svg",
+    img: userIcon,
   },
   {
     id: 4,
-    img: "src/public/icons/mode.svg",
+    img: modeIcon,
   },
 ];
 
@@ -39,37 +93,43 @@ const dockApps = [
   {
     id: "finder",
     name: "Portfolio", // was "Finder"
-    icon: "finder.png",
+    icon: finderImg,
     canOpen: true,
   },
   {
     id: "safari",
     name: "Articles", // was "Safari"
-    icon: "safari.png",
+    icon: safariImg,
     canOpen: true,
   },
   {
     id: "photos",
     name: "Gallery", // was "Photos"
-    icon: "photos.png",
+    icon: photosImg,
+    canOpen: true,
+  },
+  {
+    id: "resume",
+    name: "Resume",
+    icon: pdfImg,
     canOpen: true,
   },
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
-    icon: "contact.png",
+    icon: contactImg,
     canOpen: true,
   },
   {
     id: "terminal",
     name: "Skills", // was "Terminal"
-    icon: "terminal.png",
+    icon: terminalImg,
     canOpen: true,
   },
   {
     id: "trash",
     name: "Archive", // was "Trash"
-    icon: "trash.png",
+    icon: trashImg,
     canOpen: false,
   },
 ];
@@ -77,110 +137,206 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    date: "Jan 12, 2026",
+    title: "From Curiosity to Code: How My Tech Journey Began",
+    image: journeyImg,
+    content: [
+      "My journey into tech didn't start with a roadmap or a startup idea—it started with curiosity. I was fascinated by how applications worked behind the scenes and how software quietly powers almost everything we use daily.",
+      {
+        videoTitle: "Watch My Journey",
+        video: "https://www.youtube.com/embed/T8303t4nMTc",
+      },
+      {
+        heading: "Discovering Programming & Problem Solving",
+        text: "I began with core programming fundamentals—logic building, understanding how code executes, and translating real-world problems into software solutions. This phase shaped the way I think: break problems down, solve step by step, and always focus on clarity.",
+      },
+      {
+        heading: "Why Blockchain Caught My Attention",
+        text: "Blockchain stood out because it challenged traditional centralized systems. Concepts like decentralization, transparency, and trustless execution pushed me to think beyond basic CRUD applications and toward systems that scale globally.",
+      },
+      {
+        listTitle: "Key Learnings from This Phase:",
+        list: [
+          "Strong fundamentals matter more than frameworks",
+          "Learning by building beats passive learning",
+          "Curiosity is the best long-term motivator",
+          "Breaking things is part of real growth",
+        ],
+      },
+      "This phase laid the foundation for everything that followed. Instead of chasing trends, I focused on understanding how systems work—and that mindset still guides me today.",
+    ],
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Jan 18, 2026",
+    title: "Learning by Doing: Workshops, Hackathons & Community Building",
+    image: hackathonImg,
+    content: [
+      "At some point, learning alone wasn't enough. I wanted to test my skills in real environments—with deadlines, teamwork, and real users. That's where hackathons and workshops changed everything.",
+      {
+        heading: "From Participant to Mentor",
+        text: "Starting as a participant, I later moved into mentoring and leading blockchain workshops. Teaching others forced me to simplify complex ideas and strengthened my own understanding of core concepts.",
+      },
+      {
+        heading: "The Power of Community",
+        text: "Organizing sessions, helping developers debug projects, and collaborating with different teams taught me that great products are rarely built in isolation. Communities accelerate learning and innovation.",
+      },
+      {
+        listTitle: "What I Gained Beyond Technical Skills:",
+        list: [
+          "Clear technical communication",
+          "Leadership under pressure",
+          "Confidence in real-world problem solving",
+          "Experience working with diverse teams",
+        ],
+      },
+      "Winning hackathons felt great, but the real reward was confidence—the belief that I could walk into any technical room and contribute meaningfully.",
+    ],
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Jan 24, 2026",
+    title: "Thinking in Systems: My Shift to Full-Stack Development",
+    image: systemsImg,
+    content: [
+      "As my projects grew, I stopped thinking in terms of frontend or backend. I started thinking in systems—how data flows, how APIs scale, and how users actually experience products.",
+      {
+        heading: "Exploring the Full Stack",
+        text: "I worked with modern frontends using React and built backends using multiple languages and frameworks. This helped me understand trade-offs in performance, scalability, and maintainability.",
+      },
+      {
+        heading: "Designing for Users, Not Just Developers",
+        text: "I learned that clean architecture and good UX go hand in hand. The best solutions are often the simplest ones—clear APIs, predictable behavior, and fast interfaces.",
+      },
+      {
+        listTitle: "Core Principles I Follow Now:",
+        list: [
+          "Simplicity over complexity",
+          "Scalable design from day one",
+          "Readable code beats clever code",
+          "User experience is part of engineering",
+        ],
+      },
+      "This shift transformed how I build products. I now approach every project with a system-level mindset rather than isolated features.",
+    ],
+  },
+  {
+    id: 4,
+    date: "Jan 30, 2026",
+    title: "Where I Am Now: AI, Web3 & Building for Real Impact",
+    image: aiWeb3Img,
+    content: [
+      "Today, my focus sits at the intersection of AI, Web3, and real-world product growth. I'm no longer building just to learn—I'm building to solve problems that actually matter.",
+      {
+        heading: "AI as a Practical Tool",
+        text: "Rather than treating AI as a buzzword, I use it to enhance products—automation, insights, and smarter user experiences. Prompt design and system integration matter as much as the model itself.",
+      },
+      {
+        heading: "Beyond Code: Distribution & Trust",
+        text: "Through marketing, community building, and startup-oriented projects, I learned that technology alone isn't enough. Distribution, storytelling, and trust decide whether a product succeeds.",
+      },
+      {
+        listTitle: "What I'm Focused on Going Forward:",
+        list: [
+          "Building market-ready products",
+          "Combining AI with scalable systems",
+          "Growing developer and user communities",
+          "Learning fast and adapting faster",
+        ],
+      },
+      "This journey is still unfolding. I don't aim to know everything—I aim to keep building, learning, and improving. That's the mindset I carry into every project today.",
+    ],
   },
 ];
 
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["React.js", "Next.js", "JavaScript"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS", "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express.js"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB"],
+  },
+  {
+    category: "Blockchain & Web3",
+    items: [
+      "Blockchain Fundamentals",
+      "Smart Contract Development",
+      "Web3 Application Development",
+      "Internet Computer Protocol (ICP)",
+      "dApp Development",
+    ],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub"],
   },
 ];
 
 const socials = [
   {
     id: 1,
-    text: "Github",
-    icon: "/icons/github.svg",
+    text: "GitHub",
+    icon: githubIcon,
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/pandeymynk",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    text: "LinkedIn",
+    icon: linkedinIcon,
+    bg: "#05b6f6",
+    link: "https://www.linkedin.com/in/mayank-pnd",
   },
   {
     id: 3,
-    text: "Twitter/X",
-    icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    text: "Email",
+    icon: mailIcon,
+    bg: "#4bcb63",
+    link: "mailto:mayankpandey8171@gmail.com",
   },
   {
     id: 4,
-    text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    text: "Telegram",
+    icon: telegramIcon,
+    bg: "#ff866b",
+    link: "https://t.me/systwm",
   },
 ];
 
 const photosLinks = [
   {
     id: 1,
-    icon: "/icons/gicon1.svg",
+    icon: gicon1,
     title: "Library",
   },
   {
     id: 2,
-    icon: "/icons/gicon2.svg",
+    icon: gicon2,
     title: "Memories",
   },
   {
     id: 3,
-    icon: "/icons/file.svg",
+    icon: fileIcon,
     title: "Places",
   },
   {
     id: 4,
-    icon: "/icons/gicon4.svg",
+    icon: gicon4,
     title: "People",
   },
   {
     id: 5,
-    icon: "/icons/gicon5.svg",
+    icon: gicon5,
     title: "Favorites",
   },
 ];
@@ -188,19 +344,35 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: gal1Img,
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: gal2Img,
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: gal3Img,
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: gal4Img,
+  },
+  {
+    id: 5,
+    img: gal5Img,
+  },
+  {
+    id: 6,
+    img: gal6Img,
+  },
+  {
+    id: 7,
+    img: gal7Img,
+  },
+  {
+    id: 8,
+    img: gal8Img,
   },
 ];
 
@@ -219,163 +391,163 @@ const WORK_LOCATION = {
   id: 1,
   type: "work",
   name: "Work",
-  icon: "/icons/work.svg",
+  icon: workIcon,
   kind: "folder",
   children: [
-    // ▶ Project 1
+    // ▶ Project 1 - PushMeet
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
-      icon: "/images/folder.png",
+      name: "PushMeet - Web3 Messaging",
+      icon: folderImg,
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      position: "top-10 left-5",
+      windowPosition: "top-[5vh] left-5",
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
-          icon: "/images/txt.png",
+          name: "PushMeet Project.txt",
+          icon: txtImg,
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "PushMeet is a decentralized Web3 messaging and networking platform built on Push Protocol for seamless blockchain-based communication.",
+            "Connect, message, and tip builders in Web3 with on-chain messaging stored on Push Chain with full transparency.",
+            "Features include crypto tips to appreciate builders by sending instant crypto directly to their wallet, and Web3 networking with verified wallet-based identities.",
+            "Built with React, Vite, Tailwind, Hardhat, and Solidity smart contracts deployed on Push Devnet.",
           ],
         },
         {
           id: 2,
-          name: "nike.com",
-          icon: "/images/safari.png",
+          name: "pushmeet.vercel.app",
+          icon: safariImg,
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://pushmeet.vercel.app",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "nike.png",
-          icon: "/images/image.png",
+          name: "pushmeet.png",
+          icon: imageImg,
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
+          imageUrl: project1Img,
         },
         {
           id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          name: "GitHub.url",
+          icon: plainImg,
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "url",
+          href: "https://github.com/pandeymynk/pushmeet",
           position: "top-60 right-20",
         },
       ],
     },
 
-    // ▶ Project 2
+    // ▶ Project 2 - BookingWay
     {
       id: 6,
-      name: "AI Resume Analyzer",
-      icon: "/images/folder.png",
+      name: "BookingWay - Movie Tickets",
+      icon: folderImg,
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
-          icon: "/images/txt.png",
+          name: "BookingWay Project.txt",
+          icon: txtImg,
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "BookingWay is a full-stack movie ticket booking application inspired by BookMyShow, with a beautiful and modern UI.",
+            "Features include user authentication (signup & login), movie selection, time slot selection, seat selection (A1-A4, D1-D2), and booking history.",
+            "The frontend is built with React.js 18 using React Router DOM and Context API for state management with CSS3 animations.",
+            "Backend uses Node.js with Express.js and MongoDB with Mongoose for data storage.",
           ],
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
-          icon: "/images/safari.png",
+          name: "View on GitHub",
+          icon: safariImg,
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "https://github.com/pandeymynk/BOOKING-WAY-",
           position: "top-20 left-20",
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
-          icon: "/images/image.png",
+          name: "bookingway.png",
+          icon: imageImg,
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          imageUrl: project2Img,
         },
         {
           id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          name: "GitHub.url",
+          icon: plainImg,
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "url",
+          href: "https://github.com/pandeymynk/BOOKING-WAY-",
           position: "top-60 left-5",
         },
       ],
     },
 
-    // ▶ Project 3
+    // ▶ Project 3 - ReviewOnChain
     {
       id: 7,
-      name: "Food Delivery App",
-      icon: "/images/folder.png",
+      name: "ReviewOnChain - Decentralized Reviews",
+      icon: folderImg,
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
-          icon: "/images/txt.png",
+          name: "ReviewOnChain Project.txt",
+          icon: txtImg,
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "ReviewOnChain is a fully decentralized review platform built on Internet Computer Protocol (ICP), ensuring transparency and authenticity.",
+            "Unlike traditional systems where many reviews are influenced by companies with fake reviews, this platform provides customers with accurate and trustworthy results.",
+            "The project decentralizes the review system, eliminating the manipulation common in centralized platforms.",
+            "Built with Motoko programming language for backend canisters and React/JavaScript for the frontend, deployed on the Internet Computer.",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
-          icon: "/images/safari.png",
+          name: "View on GitHub",
+          icon: safariImg,
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "https://github.com/pandeymynk/reviewonchain",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
-          icon: "/images/image.png",
+          name: "reviewonchain.png",
+          icon: imageImg,
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: project3Img,
         },
         {
           id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          name: "GitHub.url",
+          icon: plainImg,
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "url",
+          href: "https://github.com/pandeymynk/reviewonchain",
           position: "top-60 right-20",
         },
       ],
@@ -387,45 +559,45 @@ const ABOUT_LOCATION = {
   id: 2,
   type: "about",
   name: "About me",
-  icon: "/icons/info.svg",
+  icon: infoIcon,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "me.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: adrianImg,
     },
     {
       id: 2,
       name: "casual-me.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: adrian2Img,
     },
     {
       id: 3,
       name: "conference-me.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: adrian3Img,
     },
     {
       id: 4,
       name: "about-me.txt",
-      icon: "/images/txt.png",
+      icon: txtImg,
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: adrianImg,
       description: [
         "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
@@ -440,13 +612,13 @@ const RESUME_LOCATION = {
   id: 3,
   type: "resume",
   name: "Resume",
-  icon: "/icons/file.svg",
+  icon: fileIcon,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "Resume.pdf",
-      icon: "/images/pdf.png",
+      icon: pdfImg,
       kind: "file",
       fileType: "pdf",
       // you can add `href` if you want to open a hosted resume
@@ -459,26 +631,26 @@ const TRASH_LOCATION = {
   id: 4,
   type: "trash",
   name: "Trash",
-  icon: "/icons/trash.svg",
+  icon: trashIcon,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "trash1.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
+      imageUrl: trash1Img,
     },
     {
       id: 2,
       name: "trash2.png",
-      icon: "/images/image.png",
+      icon: imageImg,
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      imageUrl: trash2Img,
     },
   ],
 };
@@ -493,7 +665,7 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: { isOpen: true, zIndex: INITIAL_Z_INDEX + 1, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
@@ -501,6 +673,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  blog: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

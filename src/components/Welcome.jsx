@@ -80,22 +80,25 @@ const Welcome = () => {
 
   return (
     <section id="welcome">
-      <p ref={subtitleRef}>
+      <p ref={subtitleRef} className="max-sm:text-lg">
         {renderText(
           "Hey, I'm Mayank Welcome to my",
-          "text-3xl font-georama",
+          "text-3xl font-georama max-sm:text-lg",
           100
         )}
       </p>
 
-      <h1 ref={titleRef} className="mt-7">
-        {renderText("portfolio", "text-9xl italic font-georama")}
+      <h1 ref={titleRef} className="mt-7 max-sm:text-5xl">
+        {renderText(
+          "portfolio",
+          "text-9xl italic font-georama max-sm:text-4xl"
+        )}
       </h1>
 
       <div className="small-screen">
-        <p>
-          This Portfolio is designed for Tablet/Desktop only. If you seeing in
-          mobile, Enable Desktop Mode
+        <p className="max-sm:text-sm">
+          Welcome to my portfolio! Tap any app from the dock or home screen to
+          explore my work.
         </p>
       </div>
     </section>

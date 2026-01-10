@@ -19,6 +19,7 @@ export default defineConfig({
     },
   },
   server: {
+    port: 3000, // Change this to any port you want (e.g., 3000, 4000, 5174)
     watch: {
       usePolling: true,
     },
