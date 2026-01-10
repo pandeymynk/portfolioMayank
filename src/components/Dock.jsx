@@ -50,12 +50,15 @@ const Dock = () => {
   React.useEffect(() => {
     const container = dockRef.current;
     if (!container) return;
-    container.addEventListener("mousemove", handleMouseMove);
-    container.addEventListener("mouseleave", resetIcons);
-    return () => {
-      container.removeEventListener("mousemove", handleMouseMove);
-      container.removeEventListener("mouseleave", resetIcons);
-    };
+    // Only add hover animations on desktop, not mobile
+    if (window.innerWidth >= 768) {
+      container.addEventListener("mousemove", handleMouseMove);
+      container.addEventListener("mouseleave", resetIcons);
+      return () => {
+        container.removeEventListener("mousemove", handleMouseMove);
+        container.removeEventListener("mouseleave", resetIcons);
+      };
+    }
   }, []);
 
   const toggleApp = (app) => {
