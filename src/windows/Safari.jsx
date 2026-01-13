@@ -22,15 +22,21 @@ const Safari = () => {
     openWindow("blog", post);
   };
   return (
-    <>
-      <div id="window-header">
+    <div className="flex flex-col h-full max-sm:h-[100dvh]">
+      <div
+        id="window-header"
+        className="flex-shrink-0 max-sm:flex-wrap max-sm:gap-2"
+      >
         <WindowControl target="safari" />
-        <PanelLeft className="ml-10 icon" />
-        <div className="flex items-center gap-1 ml-5">
+        <h2 className="hidden max-sm:block text-sm font-semibold text-gray-700 flex-1 text-center">
+          Articles
+        </h2>
+        <PanelLeft className="ml-10 icon max-sm:hidden" />
+        <div className="flex items-center gap-1 ml-5 max-sm:hidden">
           <ChevronLeft className="icon" />
           <ChevronRight className="icon" />
         </div>
-        <div className="flex-1 flex-center gap-3">
+        <div className="flex-1 flex-center gap-3 max-sm:hidden">
           <ShieldHalf className="icon" />
           <div className="search">
             <Search className="icon" />
@@ -41,21 +47,24 @@ const Safari = () => {
             />
           </div>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 max-sm:hidden">
           <Share className="icon" />
           <Plus className="icon" />
           <Copy className="icon" />
         </div>
       </div>
 
-      <div className="blog">
+      <div
+        className="blog flex-1 overflow-y-auto overscroll-contain pb-24"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         <h2>My Developer Blog</h2>
 
-        <div className="space-y-8">
+        <div className="space-y-8 max-sm:space-y-6">
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="blog-post cursor-pointer hover:scale-[1.02] transition-transform"
+              className="blog-post cursor-pointer hover:scale-[1.02] transition-transform max-sm:hover:scale-100 max-sm:active:bg-gray-50 max-sm:rounded-lg max-sm:p-2"
               onClick={() => handleBlogClick(post)}
             >
               <div className="col-span-2">
@@ -73,7 +82,7 @@ const Safari = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

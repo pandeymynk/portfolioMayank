@@ -1,10 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { dockApps } from "../constants";
 import useWindowStore from "#store/window";
 import { Tooltip } from "react-tooltip";
+
 const Dock = () => {
   const { openWindow, closeWindow, windows } = useWindowStore();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const dockRef = useRef(null);
 
@@ -77,30 +86,64 @@ const Dock = () => {
     console.log(windows);
   };
 
+  // Only show 4 favorite apps in mobile dock
+  const mobileDockApps = dockApps.filter((app) =>
+    ["finder", "safari", "contact", "terminal"].includes(app.id)
+  );
+
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
-        {dockApps.map(({ id, name, icon, canOpen }) => (
-          <div key={id} className="relative flex justify-center">
+        {/* Desktop: show all apps */}
+        <div className="hidden sm:flex items-end gap-1.5">
+          {dockApps.map(({ id, name, icon, canOpen }) => (
+            <div key={id} className="relative flex justify-center">
+              <button
+                type="button"
+                className="dock-icon"
+                aria-label={name}
+                data-tooltip-id="dock-tooltip"
+                data-tooltip-content={name}
+                data-tooltip-delay-show={150}
+                disabled={!canOpen}
+                onClick={() => toggleApp({ id, name, icon, canOpen })}
+              >
+                <img
+                  src={icon}
+                  alt={name}
+                  loading="lazy"
+                  className={canOpen ? "" : "opacity-60"}
+                />
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: iPhone-style dock with 4 apps */}
+        <div className="sm:hidden flex items-center justify-around w-full">
+          {mobileDockApps.map(({ id, name, icon, canOpen }) => (
             <button
+              key={id}
               type="button"
-              className="dock-icon"
+              className="flex flex-col items-center gap-0.5 active:scale-90 transition-transform"
               aria-label={name}
-              data-tooltip-id="dock-tooltip"
-              data-tooltip-content={name}
-              data-tooltip-delay-show={150}
               disabled={!canOpen}
               onClick={() => toggleApp({ id, name, icon, canOpen })}
             >
-              <img
-                src={icon}
-                alt={name}
-                loading="lazy"
-                className={canOpen ? "" : "opacity-60"}
-              />
+              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={icon}
+                  alt={name}
+                  loading="lazy"
+                  className={`w-full h-full object-contain ${
+                    canOpen ? "" : "opacity-60"
+                  }`}
+                />
+              </div>
             </button>
-          </div>
-        ))}
+          ))}
+        </div>
+
         <Tooltip id="dock-tooltip" place="top" className="tooltip" />
       </div>
     </section>

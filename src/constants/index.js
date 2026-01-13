@@ -569,7 +569,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: adrianImg,
+      imageUrl: gal3Img,
     },
     {
       id: 2,
@@ -578,7 +578,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: adrian2Img,
+      imageUrl: gal4Img,
     },
     {
       id: 3,
@@ -587,7 +587,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: adrian3Img,
+      imageUrl: gal5Img,
     },
     {
       id: 4,
@@ -597,12 +597,12 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: adrianImg,
+      image: gal1Img,
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hey! I'm Mayank Pandey 👋, a passionate web developer who loves crafting sleek, interactive websites that deliver great user experiences.",
+        "I specialize in JavaScript, React, and modern web technologies—building applications that are smooth, fast, and delightful to use.",
+        "I'm passionate about clean UI, intuitive UX, and writing maintainable code that scales well.",
+        "When I'm not coding, you'll find me exploring new tech, learning something new, or enjoying a good cup of coffee ☕",
       ],
     },
   ],
@@ -664,8 +664,11 @@ export const locations = {
 
 const INITIAL_Z_INDEX = 1000;
 
+// Check if we're on mobile - Finder should not auto-open on mobile
+const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+
 const WINDOW_CONFIG = {
-  finder: { isOpen: true, zIndex: INITIAL_Z_INDEX + 1, data: null },
+  finder: { isOpen: !isMobile, zIndex: INITIAL_Z_INDEX + 1, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },

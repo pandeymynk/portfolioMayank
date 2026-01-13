@@ -18,8 +18,8 @@ const Resume = () => {
   const [error, setError] = useState(null);
 
   return (
-    <>
-      <div id="window-header">
+    <div className="flex flex-col h-full max-sm:h-[100dvh]">
+      <div id="window-header" className="flex-shrink-0">
         <WindowControl target="resume" />
         <h2>Resume.pdf</h2>
 
@@ -33,7 +33,7 @@ const Resume = () => {
         </a>
       </div>
 
-      <div className="resume-viewer">
+      <div className="resume-viewer flex-1 overflow-y-auto overscroll-contain pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
         {error && <p className="text-red-500 p-4">Error: {error}</p>}
         <Document
           file="/resume.pdf"
@@ -55,7 +55,7 @@ const Resume = () => {
           />
         </Document>
       </div>
-    </>
+    </div>
   );
 };
 
