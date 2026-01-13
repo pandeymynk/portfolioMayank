@@ -21,7 +21,10 @@ const Photos = () => {
         <h2>Gallery</h2>
       </div>
 
-      <div className="p-5 flex-1 overflow-y-auto overscroll-contain pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <div
+        className="p-5 flex-1 overflow-y-auto overscroll-contain pb-24"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         <div className="grid grid-cols-2 gap-4">
           {gallery.map((photo) => (
             <div

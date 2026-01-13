@@ -17,7 +17,10 @@ const Image = () => {
         <h2>{name}</h2>
       </div>
 
-      <div className="p-5 bg-white flex-1 overflow-y-auto overscroll-contain flex items-center justify-center" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <div
+        className="p-5 bg-white flex-1 overflow-y-auto overscroll-contain flex items-center justify-center"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         {imageUrl ? (
           <div className="w-full">
             <img

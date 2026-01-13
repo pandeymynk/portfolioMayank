@@ -22,7 +22,10 @@ const Blog = () => {
         </h2>
       </div>
 
-      <div className="p-8 space-y-6 bg-white overflow-y-auto flex-1 overscroll-contain pb-24 max-sm:p-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <div
+        className="p-8 space-y-6 bg-white overflow-y-auto flex-1 overscroll-contain pb-24 max-sm:p-4"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         {/* Blog Header */}
         <div className="space-y-3">
           <p className="text-sm text-gray-500">{date}</p>

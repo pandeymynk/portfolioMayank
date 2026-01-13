@@ -33,7 +33,10 @@ const Resume = () => {
         </a>
       </div>
 
-      <div className="resume-viewer flex-1 overflow-y-auto overscroll-contain pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <div
+        className="resume-viewer flex-1 overflow-y-auto overscroll-contain pb-24"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         {error && <p className="text-red-500 p-4">Error: {error}</p>}
         <Document
           file="/resume.pdf"
