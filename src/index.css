@@ -11,6 +11,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Allow touch scrolling on mobile inside windows */
+* {
+  -webkit-overflow-scrolling: touch;
 }
 
 @theme {
@@ -38,9 +44,10 @@ body {
 
   nav {
     @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply max-sm:bg-black/20 max-sm:backdrop-blur-md max-sm:px-4 max-sm:py-2 max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:right-0 max-sm:z-50;
 
     div {
-      @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
+      @apply flex items-center max-sm:w-full max-sm:justify-between gap-5;
 
       &:last-child {
         @apply max-sm:hidden;
@@ -56,7 +63,7 @@ body {
     }
 
     time {
-      @apply text-sm font-medium text-black;
+      @apply text-sm font-medium text-black max-sm:text-white max-sm:text-xs max-sm:font-semibold;
     }
   }
 }
@@ -67,7 +74,8 @@ body {
   }
 
   #welcome {
-    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10 max-sm:pb-24 z-10 pointer-events-none;
+    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none z-10 pointer-events-none;
+    @apply max-sm:hidden;
 
     p,
     h1 {
@@ -84,11 +92,17 @@ body {
   }
 
   #dock {
-    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:translate-x-0;
+    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none;
+    @apply max-sm:fixed max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:translate-x-0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    @media (max-width: 639px) {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
 
     .dock-container {
       @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
-      @apply max-sm:rounded-none max-sm:p-3 max-sm:justify-start max-sm:overflow-x-auto max-sm:gap-2;
+      @apply max-sm:rounded-none max-sm:rounded-t-2xl max-sm:p-4 max-sm:pb-6 max-sm:bg-white/10 max-sm:backdrop-blur-xl;
     }
 
     .tooltip {
@@ -98,7 +112,6 @@ body {
 
     .dock-icon {
       @apply size-14 3xl:size-20 cursor-pointer;
-      @apply max-sm:size-16;
 
       img {
         @apply object-cover object-center;
@@ -128,11 +141,11 @@ body {
 
   #safari {
     @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:rounded-none;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     .search {
       @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
-      @apply max-sm:w-full max-sm:mx-2 max-sm:mt-2;
+      @apply max-sm:w-full max-sm:mx-0 max-sm:mt-0 max-sm:rounded-none max-sm:border-x-0 max-sm:border-t-0;
 
       input {
         @apply placeholder:text-gray-400;
@@ -141,7 +154,7 @@ body {
 
     .blog {
       @apply bg-white p-10 max-w-3xl mx-auto;
-      @apply max-sm:p-4;
+      @apply max-sm:p-4 max-sm:flex-1 max-sm:overflow-y-auto max-sm:pb-20;
 
       h2 {
         @apply text-xl font-bold text-pink-600 mb-10;
@@ -180,7 +193,7 @@ body {
 
   #terminal {
     @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:rounded-none max-sm:absolute;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -188,7 +201,7 @@ body {
 
     .techstack {
       @apply text-sm font-roboto p-5;
-      @apply max-sm:text-xs max-sm:p-3;
+      @apply max-sm:text-xs max-sm:p-3 max-sm:flex-1 max-sm:overflow-y-auto max-sm:pb-20;
 
       .label {
         @apply flex items-center ms-10 mt-7;
@@ -239,7 +252,7 @@ body {
 
   #contact {
     @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:rounded-none max-sm:absolute max-sm:max-w-none;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:!max-w-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -253,20 +266,20 @@ body {
 
     ul {
       @apply flex items-center gap-3;
-      @apply max-sm:flex-col max-sm:gap-2;
+      @apply max-sm:flex-col max-sm:gap-3;
 
       li {
         @apply rounded-lg p-3 w-60 hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300;
-        @apply max-sm:w-full max-sm:p-2;
+        @apply max-sm:w-full max-sm:p-4;
 
         a {
           @apply space-y-5;
-          @apply max-sm:flex max-sm:items-center max-sm:gap-3 max-sm:space-y-0;
+          @apply max-sm:flex max-sm:items-center max-sm:gap-4 max-sm:space-y-0;
         }
 
         p {
           @apply font-semibold text-sm text-white;
-          @apply max-sm:text-xs;
+          @apply max-sm:text-base;
         }
       }
     }
@@ -274,7 +287,7 @@ body {
 
   #photos {
     @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:-translate-y-0 max-sm:rounded-none max-sm:absolute;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!-translate-y-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -305,11 +318,11 @@ body {
 
     .gallery {
       @apply p-5;
-      @apply max-sm:p-3;
+      @apply max-sm:p-3 max-sm:flex-1 max-sm:overflow-y-auto max-sm:pb-20;
 
       ul {
         @apply grid grid-cols-5 grid-rows-5 gap-2.5;
-        @apply max-sm:grid-cols-2 max-sm:grid-rows-none max-sm:gap-2;
+        @apply max-sm:grid-cols-2 max-sm:grid-rows-none max-sm:gap-3;
 
         li {
           img {
@@ -342,7 +355,7 @@ body {
 
   #resume {
     @apply w-fit h-fit absolute top-16 left-1/4 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-w-4xl;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:rounded-none max-sm:absolute;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     #window-header {
       h2 {
@@ -354,7 +367,12 @@ body {
       @apply p-4 bg-gray-100 overflow-auto;
       max-height: calc(100vh - 200px);
       width: fit-content;
-      @apply max-sm:max-h-[calc(100vh-120px)] max-sm:w-full max-sm:p-2;
+      @apply max-sm:flex-1 max-sm:w-full max-sm:p-2 max-sm:pb-20;
+      max-height: none;
+
+      @media (max-width: 639px) {
+        max-height: none;
+      }
 
       .react-pdf__Document {
         @apply flex flex-col gap-4;
@@ -365,14 +383,14 @@ body {
       }
 
       canvas {
-        @apply mx-auto;
+        @apply mx-auto max-sm:max-w-full max-sm:h-auto;
       }
     }
   }
 
   #finder {
     @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
-    @apply max-sm:w-full max-sm:h-full max-sm:left-0 max-sm:top-0 max-sm:rounded-none;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!left-0 max-sm:!top-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     .sidebar {
       @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
@@ -401,19 +419,20 @@ body {
 
     .content {
       @apply flex-1 p-8 bg-white max-w-2xl relative;
-      @apply max-sm:p-4 max-sm:max-w-none;
+      @apply max-sm:p-4 max-sm:max-w-none max-sm:overflow-y-auto max-sm:pb-20;
 
       li {
         @apply absolute flex items-center flex-col gap-3;
+        @apply max-sm:static;
 
         img {
           @apply object-contain object-center size-16 relative group-hover:scale-105;
-          @apply max-sm:size-12;
+          @apply max-sm:size-14;
         }
 
         p {
           @apply text-sm text-center font-medium w-40;
-          @apply max-sm:text-xs max-sm:w-32;
+          @apply max-sm:text-xs max-sm:w-24;
         }
       }
     }
@@ -421,7 +440,7 @@ body {
 
   #txtfile {
     @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:right-0 max-sm:rounded-none max-sm:absolute;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!right-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -430,7 +449,7 @@ body {
 
   #imgfile {
     @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:rounded-none max-sm:absolute;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     #window-header {
       p {
@@ -439,18 +458,24 @@ body {
     }
 
     .preview {
-      @apply p-2 bg-gray-200 max-h-[70vh];
-      @apply max-sm:max-h-[calc(100vh-120px)];
+      @apply p-2 bg-gray-200;
+      @apply max-sm:flex-1 max-sm:flex max-sm:items-center max-sm:justify-center max-sm:pb-20;
+      max-height: 70vh;
+
+      @media (max-width: 639px) {
+        max-height: none;
+      }
 
       img {
         @apply w-full h-fit object-contain object-center;
+        @apply max-sm:max-h-full max-sm:w-auto;
       }
     }
   }
 
   #blog {
     @apply w-2xl absolute top-20 left-1/2 -translate-x-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:w-full max-sm:h-full max-sm:top-0 max-sm:left-0 max-sm:translate-x-0 max-sm:rounded-none max-sm:absolute;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!translate-x-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;

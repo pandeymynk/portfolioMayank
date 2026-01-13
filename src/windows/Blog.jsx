@@ -14,17 +14,24 @@ const Blog = () => {
   const { title, date, image, content } = data;
 
   return (
-    <>
-      <div id="window-header">
+    <div className="flex flex-col h-full max-sm:h-[100dvh]">
+      <div id="window-header" className="flex-shrink-0">
         <WindowControl target="blog" />
-        <h2>{title}</h2>
+        <h2 className="max-sm:text-xs max-sm:truncate max-sm:max-w-[200px]">
+          {title}
+        </h2>
       </div>
 
-      <div className="p-8 space-y-6 bg-white overflow-y-auto max-h-[70vh]">
+      <div
+        className="p-8 space-y-6 bg-white overflow-y-auto flex-1 overscroll-contain pb-24 max-sm:p-4"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         {/* Blog Header */}
         <div className="space-y-3">
           <p className="text-sm text-gray-500">{date}</p>
-          <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
+          <h1 className="text-3xl font-bold text-gray-900 max-sm:text-xl">
+            {title}
+          </h1>
         </div>
 
         {/* Featured Image */}
@@ -39,7 +46,7 @@ const Blog = () => {
         )}
 
         {/* Blog Content */}
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none max-sm:prose-sm">
           {Array.isArray(content) ? (
             content.map((section, idx) => {
               // If section is a string, render as paragraph
@@ -116,7 +123,7 @@ const Blog = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

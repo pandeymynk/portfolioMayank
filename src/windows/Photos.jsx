@@ -15,13 +15,16 @@ const Photos = () => {
   };
 
   return (
-    <>
-      <div id="window-header">
+    <div className="flex flex-col h-full max-sm:h-[100dvh]">
+      <div id="window-header" className="flex-shrink-0">
         <WindowControl target="photos" />
         <h2>Gallery</h2>
       </div>
 
-      <div className="p-5">
+      <div
+        className="p-5 flex-1 overflow-y-auto overscroll-contain pb-24"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         <div className="grid grid-cols-2 gap-4">
           {gallery.map((photo) => (
             <div
@@ -38,7 +41,7 @@ const Photos = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

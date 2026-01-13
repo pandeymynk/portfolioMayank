@@ -4,13 +4,16 @@ import { Check, Flag } from "lucide-react";
 import { WindowControl } from "#components";
 const Terminal = () => {
   return (
-    <>
-      <div id="window-header">
+    <div className="flex flex-col h-full max-sm:h-[100dvh]">
+      <div id="window-header" className="flex-shrink-0">
         <WindowControl target="terminal" />
         <h2>Tech Stack</h2>
       </div>
 
-      <div className="techstack">
+      <div
+        className="techstack flex-1 overflow-y-auto overscroll-contain pb-24"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         <p>
           <span className="font-bold">@Mayank %</span> show tech stack
         </p>
@@ -47,7 +50,7 @@ const Terminal = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
