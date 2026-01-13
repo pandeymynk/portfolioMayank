@@ -62,6 +62,43 @@ const WindowWrapper = (Component, windowKey) => {
       };
     }, [isMobile, isOpen, closeWindow, windowKey]);
 
+    // Handle browser back button to close window on mobile
+    useEffect(() => {
+      if (!isMobile) return;
+
+      // When window opens, push a history state
+      if (isOpen) {
+        window.history.pushState({ window: windowKey }, "");
+      }
+
+      const handlePopState = (e) => {
+        // If this window is open, close it when back is pressed
+        if (isOpen) {
+          const el = ref.current;
+          if (el) {
+            gsap.to(el, {
+              y: "100%",
+              opacity: 0,
+              duration: 0.3,
+              ease: "power2.in",
+              onComplete: () => {
+                closeWindow(windowKey);
+                gsap.set(el, { y: 0 });
+              },
+            });
+          } else {
+            closeWindow(windowKey);
+          }
+        }
+      };
+
+      window.addEventListener("popstate", handlePopState);
+
+      return () => {
+        window.removeEventListener("popstate", handlePopState);
+      };
+    }, [isMobile, isOpen, closeWindow, windowKey]);
+
     // Opening animation
     useGSAP(() => {
       const el = ref.current;
