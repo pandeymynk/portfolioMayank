@@ -50,7 +50,7 @@ const MobileAppGrid = () => {
   };
 
   return (
-    <div className="hidden sm:hidden max-sm:block max-sm:fixed max-sm:inset-0 max-sm:z-10 max-sm:pt-14 max-sm:pb-24 max-sm:px-6 max-sm:overflow-y-auto">
+    <div className="hidden max-sm:block fixed inset-0 z-10 pt-14 pb-24 px-6 overflow-y-auto">
       <div ref={gridRef} className="grid grid-cols-4 gap-y-6 gap-x-4">
         {dockApps
           .filter((app) => app.canOpen)
