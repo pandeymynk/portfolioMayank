@@ -14,7 +14,7 @@ import gal4Img from "../public/images/gal4.jpg";
 import gal5Img from "../public/images/gal5.jpg";
 import gal6Img from "../public/images/gal6.jpg";
 import gal7Img from "../public/images/gal7.jpg";
-import gal8Img from "../public/images/gal8.jpg";
+import gal8Img from "../public/images/gal8.JPG";
 import folderImg from "../public/images/folder.png";
 import txtImg from "../public/images/txt.png";
 import imageImg from "../public/images/image.png";
