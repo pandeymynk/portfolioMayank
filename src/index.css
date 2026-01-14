@@ -418,7 +418,7 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-white max-w-2xl relative overflow-y-auto;
       @apply max-sm:p-4 max-sm:max-w-none max-sm:overflow-y-auto max-sm:pb-20;
 
       li {

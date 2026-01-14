@@ -70,9 +70,9 @@ const Finder = () => {
           {renderList("Work", locations.work.children)}
         </div>
 
-        {/* Desktop: absolute positioned content */}
-        <div className="content max-sm:hidden">
-          <ul className="content">
+        {/* Desktop: scrollable content with positioned items */}
+        <div className="content max-sm:hidden overflow-y-auto">
+          <ul className="relative min-h-[400px]">
             {activeLocation?.children.map((item) => (
               <li
                 key={item.id}
