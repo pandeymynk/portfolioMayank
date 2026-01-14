@@ -140,8 +140,8 @@ body {
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply w-4xl max-h-[85vh] absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     .search {
       @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
@@ -153,7 +153,7 @@ body {
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-white p-10 max-w-3xl mx-auto flex-1 overflow-y-auto;
       @apply max-sm:p-4 max-sm:flex-1 max-sm:overflow-y-auto max-sm:pb-20;
 
       h2 {
@@ -192,15 +192,15 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply w-xl max-h-[80vh] absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
 
     .techstack {
-      @apply text-sm font-roboto p-5;
+      @apply text-sm font-roboto p-5 flex-1 overflow-y-auto;
       @apply max-sm:text-xs max-sm:p-3 max-sm:flex-1 max-sm:overflow-y-auto max-sm:pb-20;
 
       .label {
@@ -251,8 +251,8 @@ body {
   }
 
   #contact {
-    @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:!max-w-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply max-w-2xl max-h-[80vh] absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:!max-w-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -286,8 +286,8 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!-translate-y-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply max-w-3xl max-h-[85vh] absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!left-0 max-sm:!-translate-y-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -317,7 +317,7 @@ body {
     }
 
     .gallery {
-      @apply p-5;
+      @apply p-5 flex-1 overflow-y-auto;
       @apply max-sm:p-3 max-sm:flex-1 max-sm:overflow-y-auto max-sm:pb-20;
 
       ul {
@@ -354,8 +354,8 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-1/4 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-w-4xl;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply w-fit max-h-[90vh] absolute top-16 left-1/4 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-w-4xl flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     #window-header {
       h2 {
@@ -389,8 +389,8 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!left-0 max-sm:!top-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply absolute w-3xl max-h-[85vh] left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!left-0 max-sm:!top-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     .sidebar {
       @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
@@ -448,8 +448,8 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply w-xl max-h-[85vh] absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!left-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     #window-header {
       p {
