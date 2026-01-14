@@ -439,8 +439,8 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!top-0 max-sm:!right-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
+    @apply w-md max-h-[80vh] absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-[100dvh] max-sm:!max-h-none max-sm:!top-0 max-sm:!right-0 max-sm:!rounded-none max-sm:!transform-none max-sm:flex max-sm:flex-col max-sm:overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
